@@ -36,12 +36,14 @@ $(function() {
     </li>`
     );
     /////
-    $('.shopping-list').on('click', 'shopping-item-toggle', function(event){
-      .toggleClass('.shopping-item__checked')
-    });
-
   });
+  $('.shopping-list').on('click', '.shopping-item-toggle', function() {
+    console.log('This is: ', $(this));
+    $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+  });
+
 });
+
 
 
 
